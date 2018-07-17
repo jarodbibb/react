@@ -1,0 +1,51 @@
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<div id='app'></div>
+<div id='app2'></div>
+<script>
+
+    function getTime() {
+        var time = new Date();
+        var hour = time.getHours();
+        var min = time.getMinutes();
+        var sec = time.getSeconds();
+        const getClock = React.createElement('h1', null, `The time is: ${hour}-${min}-${sec}`);
+            console.log(JSON.stringify(getClock));
+        ReactDOM.render(getClock, document.getElementById('app'));
+}
+ setInterval(getTime, 1000);
+
+   var title = React.createElement('h1', null, "Hello Dojo!")
+   var sub = React.createElement('h2', null, "Things I need to do")
+   var li1 = React.createElement('li', null, 'Run')
+   var li2 = React.createElement('li', null, "Learn React")
+   var list = React.createElement('ul', null, li1, li2)
+   ReactDOM.render([title, sub, list], document.getElementById('app2'));
+ 
+   
+</script>
+
+<!-- <div id="app"></div>
+<div id="sec"></div>
+
+<script>
+    function getCurrentTime() {
+        var time = new Date();
+        var hour = time.getHours();
+        var min = time.getMinutes();
+        var sec = time.getSeconds();
+        const getClock = React.createElement('h1', null, `The time is: ${hour}-${min}-${sec}`);
+        // console.log(JSON.stringify(getClock));
+        ReactDOM.render(getClock, document.getElementById('app'));
+    }
+    setInterval(getCurrentTime, 1000);
+    var li1 = React.createElement('li', null, `Learn React`);
+    var li2 = React.createElement('li', null, `Run`);
+    var li3 = React.createElement('li', null, `Hike`);
+    var ul = React.createElement('ul', null, li1, li2, li3);
+    var subtitle = React.createElement('h2', null, "Things I need to do:");
+    var title = React.createElement('h1', null, "Hello!")
+    var div = React.createElement('div', null, title,subtitle,ul);
+    ReactDOM.render(div, document.getElementById('sec'));
+    
+</script> -->
